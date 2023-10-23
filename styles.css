@@ -28,7 +28,6 @@ body{
 
 }
 
-
 .logo-h1{
       display: flex;
       justify-content: center;
@@ -58,18 +57,25 @@ body{
 .form-container > div:nth-child(1){
 
       gap: 1rem;
-      background-color: aqua;
+      background-color: #eeee;
       flex-basis: 30%;
 }
 .form-container > form {
 
-      flex-basis: 45%;
+      flex-basis: 40%;
+      z-index: 1;
 }
-.form-container > div:nth-child(3){
 
+.form-container > button:nth-child(3) {
 
-      background-color: green;
-      flex-basis: 25%;
+      flex-grow: 0;
+    }
+
+.form-container > div:nth-child(4){
+
+      flex-grow: 1;
+      background-color: #eeee;
+      flex-basis: 30%;
 }
 div > p:first-child{
       margin-top: 40px;
@@ -97,26 +103,29 @@ input[type="password"]{
       position: relative;
 }
 
-
-
 input:valid{
       border: 1px solid green;
 }
+
 input:hover{
       border: none;
       outline:1px solid blue;
 }
+
 input:focus{
       outline: 1px solid blue;
       border: none;
 }
+
 input:invalid{
       border: 1px solid red;
 }
+
 input:focus:invalid{
       outline: 1px solid red;
       border: none;
 }
+
 input:hover:invalid{
       border: none;
 
@@ -127,28 +136,21 @@ input + span {
       position: relative;
     }
 
-
-    input + span::before {
+input + span::before {
       position: absolute;
       right: -20px;
       top: 0;
     }
-    input:invalid + span::before {
+
+input:invalid + span::before {
       content: "✖";
       color: red;
-
     }
 
-    input:valid + span::before {
+input:valid + span::before {
       content: "✓";
       color: green;
     }
-
-
-
-
-
-
 
 fieldset{
       display: flex;
@@ -160,22 +162,39 @@ fieldset{
       padding-left: 2rem;
       padding-top: 1.5rem;
 }
+
 .flex{
       display: flex;
       gap: 2rem;
 }
-.form-container{
-      position: relative;
-}
+
 button[type="submit"]{
-      padding: .5rem 2rem;
+      padding: .5rem 3rem;
       font-size: large;
       font-weight: 600;
       color: white;
       background-color: #596D48;
       border: none;
       border-radius: 10px;
-      position: absolute;
-      bottom: 180px;
-      left: 30px;
+      z-index: 1;
+      margin-top: 2rem;
+      margin-left: 32px;
+      align-self: flex-start;
+}
+
+button[type="submit"]:hover{
+      outline: rgba(44, 151, 85, 0.76) 3px solid;
+}
+
+a{
+      text-decoration: none;
+}
+
+a:visited:hover{
+      color: rgb(159, 165, 82);
+      font-weight: 700;
+}
+
+a:visited{
+      color: rgba(85, 32, 72, 0.74);
 }
