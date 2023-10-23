@@ -97,36 +97,37 @@ input[type="password"]{
       position: relative;
 }
 
-input:hover{
-      border:1px solid blue;
-}
-input:invalid{
-      border: 1px solid red;
-}
+
+
 input:valid{
       border: 1px solid green;
+}
+input:hover{
+      border: none;
+      outline:1px solid blue;
 }
 input:focus{
       outline: 1px solid blue;
       border: none;
 }
+input:invalid{
+      border: 1px solid red;
+}
 input:focus:invalid{
       outline: 1px solid red;
       border: none;
+}
+input:hover:invalid{
+      border: none;
+
+      outline: red 1px solid;
 }
 
 input + span {
       position: relative;
     }
 
-input[type="password"]:valid{
-      border: 1px solid green;
 
-}
-input[type="password"]:invalid{
-      border: 1px solid red;
-
-}
     input + span::before {
       position: absolute;
       right: -20px;
